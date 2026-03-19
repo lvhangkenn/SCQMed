@@ -1,2 +1,2 @@
 # SCQMed
-The official code of SCQMed (ICME'26)
+We will release the code once it has been properly organized.
