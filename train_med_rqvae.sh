@@ -1,0 +1,13 @@
+CUDA_VISIBLE_DEVICES='0' python main_new_MM.py \
+  --device cuda:0 \
+  --data_path_1 ./data/MIMIC3/med_text_embedding.pkl \
+  --data_path_2 ./data/MIMIC3/med_kg_embedding.pkl \
+  --ckpt_dir ./checkpoint/ \
+  --e_dim 64 \
+  --num_emb_list 32 32 32 32\
+  --layers 512 256 64 \
+  --lr 1e-3 \
+  --batch_size 1024 \
+  --maxe 2000 \
+  --loss_type mse \
+  --recon 3
