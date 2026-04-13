@@ -1,4 +1,6 @@
-CUDA_VISIBLE_DEVICES='0' python main_new_MM.py \
+#!/usr/bin/env bash
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CUDA_VISIBLE_DEVICES='0' python "$SCRIPT_DIR/../main_new_MM.py" \
   --device cuda:0 \
   --data_path_1 ./data/MIMIC3/diag_text_embedding.pkl \
   --data_path_2 ./data/MIMIC3/diag_kg_embedding.pkl \

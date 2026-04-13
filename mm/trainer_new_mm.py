@@ -8,10 +8,10 @@ from torch import optim
 from tqdm import tqdm
 
 import torch.nn.functional as F
-from utils import ensure_dir,set_color,get_local_time
+from mm.utils import ensure_dir,set_color,get_local_time
 import os
 #import wandb
-from datasets_mm import EmbDataset
+from mm.datasets_mm import EmbDataset
 from torch.utils.data import DataLoader
 
 class Trainer(object):
