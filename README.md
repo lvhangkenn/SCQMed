@@ -8,15 +8,16 @@ This repository implements a **Structure-enhanced Multimodal Medical Concept Qua
 
 ```
 .
-├── rqvae_mm.py            # Main SE-RQVAE model definition
-├── rq_mm.py               # Residual Vector Quantizer with uniqueness loss
-├── vq_mm.py               # Single-layer VectorQuantizer with constrained K-means init & Sinkhorn
-├── layers.py              # MLP layers, activation functions, K-means, Sinkhorn
-├── datasets_mm.py         # Custom dataset loader for paired embeddings
-├── trainer_new_mm.py      # Training loop, validation, checkpointing
+├── mm/                    # Model package directory
+│   ├── datasets_mm.py     # Custom dataset loader for paired embeddings
+│   ├── layers.py          # MLP layers, activation functions, K-means, Sinkhorn
+│   ├── rq_mm.py           # Residual Vector Quantizer with uniqueness loss
+│   ├── vq_mm.py           # Single-layer VectorQuantizer with constrained K-means init & Sinkhorn
+│   ├── rqvae_mm.py        # Main SE-RQVAE model definition
+│   ├── trainer_new_mm.py  # Training loop, validation, checkpointing
+│   └── utils.py           # Helper utilities (logging, dir creation, etc.)
 ├── main_new_MM.py         # Entry point: argument parsing & training setup
-├── utils.py               # Helper utilities (logging, dir creation, etc.)
-├── train_*_rqvae*.sh      # Pre-configured training scripts
+├── scripts/               # Pre-configured training scripts
 └── data/                  # Expected data directory layout
 ```
 
@@ -26,18 +27,18 @@ This repository implements a **Structure-enhanced Multimodal Medical Concept Qua
 
 ### 1. Run Training
 
-Use one of the provided shell scripts:
+Use one of the provided shell scripts from the `scripts/` folder:
 
 ```bash
 # For MIMIC-III
-bash train_diag_rqvae.sh
-bash train_proc_rqvae.sh
-bash train_med_rqvae.sh
+bash scripts/train_diag_rqvae.sh
+bash scripts/train_proc_rqvae.sh
+bash scripts/train_med_rqvae.sh
 
 # For MIMIC-IV
-bash train_diag_rqvae_m4.sh
-bash train_proc_rqvae_m4.sh
-bash train_med_rqvae_m4.sh
+bash scripts/train_diag_rqvae_m4.sh
+bash scripts/train_proc_rqvae_m4.sh
+bash scripts/train_med_rqvae_m4.sh
 ```
 
 > 🔧 **Key Arguments**:

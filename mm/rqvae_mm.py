@@ -5,8 +5,8 @@ from torch.nn import functional as F
 #import wandb
 import random
 import collections
-from layers import MLPLayers
-from rq_mm import ResidualVectorQuantizer
+from mm.layers import MLPLayers
+from mm.rq_mm import ResidualVectorQuantizer
 from info_nce import InfoNCE, info_nce
 # from tllib.alignment.dan import MultipleKernelMaximumMeanDiscrepancy
 # from tllib.modules.kernels import GaussianKernel

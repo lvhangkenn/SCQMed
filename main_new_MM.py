@@ -6,9 +6,9 @@ from time import time
 import logging
 from torch.utils.data import DataLoader
 import pickle
-from datasets_mm import EmbDataset
-from rqvae_mm import RQVAE
-from trainer_new_mm import Trainer
+from mm.datasets_mm import EmbDataset
+from mm.rqvae_mm import RQVAE
+from mm.trainer_new_mm import Trainer
 import os
 
 def parse_args():

@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch import Tensor
 import torch.nn.functional as F
 
-from vq_mm import VectorQuantizer
+from mm.vq_mm import VectorQuantizer
 
 class SemanticIdUniquenessLoss(nn.Module):
     """

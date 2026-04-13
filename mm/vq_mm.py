@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from layers import kmeans, sinkhorn_algorithm
+from mm.layers import kmeans, sinkhorn_algorithm
 import random
 
 
